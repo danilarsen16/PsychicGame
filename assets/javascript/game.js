@@ -27,12 +27,14 @@ document.onkeypress = function (event) {
         console.log("guesses: " + guesses)
         $("#idguesses").html(guesses)
 
+
     } else if (userGuess === computerChoice){
         wins++;
         console.log("wins: " + wins)
         $("#idwins").html(wins)
         alert("Ayyyy, you Won!")
         reset ();
+
 
 
     }
@@ -42,13 +44,14 @@ document.onkeypress = function (event) {
         $("#idlosses").html(losses)
         reset ();
 
+
     }
     function reset() {
         guesses = 9;
         guessesLeft = 9;
-        var newChoice = randomLetter(letters)
+        var computerChoice = randomLetter(letters)
         lettersGuessed
-        console.log (newChoice)
+        console.log (computerChoice)
 
     }
 }
